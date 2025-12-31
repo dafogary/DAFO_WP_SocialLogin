@@ -1,0 +1,27 @@
+/* Admin styles for DAFO Social Login */
+
+.dafo-social-login-admin {
+    max-width: 800px;
+}
+
+.dafo-social-login-admin h2 {
+    border-bottom: 1px solid #ccd0d4;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+.dafo-social-login-admin .form-table th {
+    width: 250px;
+}
+
+.dafo-social-login-admin input[type="text"],
+.dafo-social-login-admin input[type="password"],
+.dafo-social-login-admin textarea {
+    width: 100%;
+    max-width: 500px;
+}
+
+.dafo-social-login-admin .description {
+    font-style: italic;
+    color: #666;
+}

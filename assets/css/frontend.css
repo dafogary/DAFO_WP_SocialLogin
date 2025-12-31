@@ -1,0 +1,178 @@
+/* Frontend styles for DAFO Social Login */
+
+.dafo-social-login-container {
+    margin: 20px 0;
+}
+
+.dafo-social-login-separator {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.dafo-social-login-separator span {
+    background: #fff;
+    padding: 0 10px;
+    color: #666;
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
+}
+
+.dafo-social-login-separator::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background: #ddd;
+}
+
+.dafo-social-login-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dafo-social-login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+.dafo-social-login-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.dafo-social-login-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.dafo-social-login-text {
+    flex: 1;
+    text-align: center;
+}
+
+/* Google */
+.dafo-social-login-google {
+    background-color: #fff;
+    color: #444;
+    border-color: #ddd;
+}
+
+.dafo-social-login-google:hover {
+    background-color: #f8f8f8;
+    color: #444;
+}
+
+.dafo-social-login-google .dafo-social-login-icon {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=');
+}
+
+/* Facebook */
+.dafo-social-login-facebook {
+    background-color: #1877f2;
+    color: #fff;
+    border-color: #1877f2;
+}
+
+.dafo-social-login-facebook:hover {
+    background-color: #166fe5;
+    color: #fff;
+}
+
+.dafo-social-login-facebook .dafo-social-login-icon {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTIwIDEwYzAtNS41Mi00LjQ4LTEwLTEwLTEwUzAgNC40OCAwIDEwYzAgNC45OSAzLjY2IDkuMTIgOC40NCA5Ljg4di03aC0yLjU0VjEwaDIuNTRWNy43OWMwLTIuNTEgMS40OS00LjkgMy45Ni00LjkgMS4xNSAwIDIuMzUuMjEgMi4zNS4yMXYyLjU4aC0xLjMyYy0xLjMgMC0xLjcxLjgxLTEuNzEgMS42NFYxMGgyLjkxbC0uNDcgMi44OGgtMi40NHY3YzQuNzgtLjc2IDguNDQtNC44OSA4LjQ0LTkuODh6IiBmaWxsPSIjZmZmIi8+PC9zdmc+');
+}
+
+/* BlueSky */
+.dafo-social-login-bluesky {
+    background-color: #1185fe;
+    color: #fff;
+    border-color: #1185fe;
+}
+
+.dafo-social-login-bluesky:hover {
+    background-color: #0f75e3;
+    color: #fff;
+}
+
+.dafo-social-login-bluesky .dafo-social-login-icon {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Ik0xMCA1YTEgMSAwIDAgMS0xIDF2M2EyIDIgMCAwIDEtMiAyIDIgMiAwIDAgMS0yLTJ2LTNhMSAxIDAgMCAxLTIgMHYzYTQgNCAwIDAgMCA0IDQgNCA0IDAgMCAwIDQtNFY2YTEgMSAwIDAgMS0xLTF6IiBmaWxsPSIjMTE4NWZlIi8+PC9zdmc+');
+}
+
+/* Apple */
+.dafo-social-login-apple {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+.dafo-social-login-apple:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+.dafo-social-login-apple .dafo-social-login-icon {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE1LjggNy4xYy0uMSAwLS42LjItLjYuMi0uNS4zLTEgLjYtMS42LjktLjYuMy0xLjEuNC0xLjcuNC0uNSAwLTEtLjEtMS41LS40LS41LS4zLS45LS42LTEuNC0uOS0uMi0uMi0uNS0uMi0uNi0uMi0xLjEgMC0yLjEgMS0yLjEgMi4zIDAgMS4yLjcgMi40IDEuNSAzLjQuOC45IDEuNyAxLjMgMi44IDEuMyAxIDAgMS44LS41IDIuNS0xIDEuMS0uNyAxLjgtMS44IDEuOC0zIDAtMS4yLTEtMi4zLTIuMS0yLjN6TTEwLjYgNmMuNS0uNy44LTEuNi44LTIuNSAwLS4yIDAtLjQtLjEtLjUtLjktLjEtMS43LjUtMi4yIDEuMS0uNS42LS43IDEuNC0uNyAyLjIgMCAuMi4xLjQuMi41LjEgMCAuMi4xLjMuMS43IDAgMS40LS41IDEuNy0uOXoiIGZpbGw9IiNmZmYiLz48L3N2Zz4=');
+}
+
+/* LinkedIn */
+.dafo-social-login-linkedin {
+    background-color: #0077b5;
+    color: #fff;
+    border-color: #0077b5;
+}
+
+.dafo-social-login-linkedin:hover {
+    background-color: #006399;
+    color: #fff;
+}
+
+.dafo-social-login-linkedin .dafo-social-login-icon {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE4LjUgMGgtMTdBMS41IDEuNSAwIDAgMCAwIDEuNXYxN0ExLjUgMS41IDAgMCAwIDEuNSAyMGgxN2ExLjUgMS41IDAgMCAwIDEuNS0xLjV2LTE3QTEuNSAxLjUgMCAwIDAgMTguNSAwek02IDE3SDNWOGgzem0tMS41LTEwYTEuNSAxLjUgMCAxIDEgMC0zIDEuNSAxLjUgMCAwIDEgMCAzek0xNyAxN2gtM3YtNC41YzAtMS4yLS40LTItMS40LTItMS4xIDAtMS42LjctMS42IDJ2NC41aC0zVjhoM3YxLjJjLjQtLjcgMS40LTEuNCAyLjctMS40IDIuOSAwIDMuMyAyIDMuMyA0LjZWMTd6IiBmaWxsPSIjZmZmIi8+PC9zdmc+');
+}
+
+/* Yahoo */
+.dafo-social-login-yahoo {
+    background-color: #6001d2;
+    color: #fff;
+    border-color: #6001d2;
+}
+
+.dafo-social-login-yahoo:hover {
+    background-color: #5000b3;
+    color: #fff;
+}
+
+.dafo-social-login-yahoo .dafo-social-login-icon {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEwIDIwQzQuNDggMjAgMCAxNS41MiAwIDEwUzQuNDggMCAxMCAwczEwIDQuNDggMTAgMTAtNC40OCAxMC0xMCAxMHptMy41LTEzTDEwIDEybC0zLjUtNWgtM2wzLjUgNS0uNSA1aDN2LTVsNC01eiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==');
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .dafo-social-login-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .dafo-social-login-button {
+        flex: 1;
+        min-width: 0;
+    }
+}
