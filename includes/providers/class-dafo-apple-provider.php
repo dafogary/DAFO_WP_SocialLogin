@@ -111,6 +111,45 @@ class DAFO_Apple_Provider extends DAFO_OAuth_Provider {
         return rtrim(strtr(base64_encode($data), '+/', '-_'), '=');
     }
     
+    /**
+     * Validate and decode Apple ID token
+     * 
+     * @param string $id_token The JWT token from Apple
+     * @return array|false Decoded payload or false on failure
+     */
+    private function validate_id_token($id_token) {
+        $parts = explode('.', $id_token);
+        
+        // JWT must have 3 parts
+        if (count($parts) !== 3) {
+            error_log('DAFO Social Login - Invalid Apple ID token format');
+            return false;
+        }
+        
+        // Decode the payload (middle part)
+        $payload_encoded = $parts[1];
+        
+        // Base64 URL decode
+        $payload_encoded = str_replace(['-', '_'], ['+', '/'], $payload_encoded);
+        $payload_encoded = str_pad($payload_encoded, strlen($payload_encoded) % 4, '=', STR_PAD_RIGHT);
+        
+        $payload_json = base64_decode($payload_encoded);
+        
+        if (!$payload_json) {
+            error_log('DAFO Social Login - Failed to decode Apple ID token payload');
+            return false;
+        }
+        
+        $payload = json_decode($payload_json, true);
+        
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            error_log('DAFO Social Login - Invalid Apple ID token JSON: ' . json_last_error_msg());
+            return false;
+        }
+        
+        return $payload;
+    }
+    
     public function get_user_data() {
         // Apple sends data via POST
         $code = '';
@@ -134,12 +173,19 @@ class DAFO_Apple_Provider extends DAFO_OAuth_Provider {
         $user_info = array();
         
         if ($id_token) {
-            $parts = explode('.', $id_token);
-            if (count($parts) === 3) {
-                $payload = json_decode(base64_decode($parts[1]), true);
-                if ($payload && isset($payload['email'])) {
-                    $user_info['email'] = $payload['email'];
-                    $user_info['id'] = isset($payload['sub']) ? $payload['sub'] : '';
+            // Validate and decode JWT token
+            $payload = $this->validate_id_token($id_token);
+            if ($payload && isset($payload['email'])) {
+                // Verify the token is from Apple
+                if (isset($payload['iss']) && $payload['iss'] === 'https://appleid.apple.com') {
+                    // Verify the audience matches our client ID
+                    if (isset($payload['aud']) && $payload['aud'] === $this->client_id) {
+                        // Verify token hasn't expired
+                        if (isset($payload['exp']) && $payload['exp'] > time()) {
+                            $user_info['email'] = sanitize_email($payload['email']);
+                            $user_info['id'] = isset($payload['sub']) ? sanitize_text_field($payload['sub']) : '';
+                        }
+                    }
                 }
             }
         }

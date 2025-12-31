@@ -18,8 +18,10 @@ class DAFO_BlueSky_Provider extends DAFO_OAuth_Provider {
     
     public function get_authorization_url($state) {
         // BlueSky OAuth implementation
-        // Note: As of now, BlueSky's OAuth implementation may vary
-        // This is a placeholder for the OAuth flow
+        // NOTE: BlueSky's OAuth implementation is still evolving.
+        // These endpoints are based on the AT Protocol OAuth specification.
+        // Please verify the current OAuth endpoints at: https://atproto.com/specs/oauth
+        // You may need to update these URLs based on the latest BlueSky documentation.
         $params = array(
             'client_id' => $this->client_id,
             'redirect_uri' => $this->get_redirect_uri(),
@@ -28,6 +30,7 @@ class DAFO_BlueSky_Provider extends DAFO_OAuth_Provider {
             'state' => $state
         );
         
+        // Default to bsky.social, but may need to support other BlueSky instances
         return 'https://bsky.social/oauth/authorize?' . http_build_query($params);
     }
     

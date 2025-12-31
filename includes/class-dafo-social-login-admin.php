@@ -275,6 +275,7 @@ class DAFO_Social_Login_Admin {
     
     public function bluesky_section_callback() {
         echo '<p>' . __('Configure BlueSky OAuth credentials.', 'dafo-social-login') . '</p>';
+        echo '<p><strong>' . __('Note:', 'dafo-social-login') . '</strong> ' . __('BlueSky OAuth implementation is based on AT Protocol and may require updates as the protocol evolves. Please refer to the latest documentation at atproto.com.', 'dafo-social-login') . '</p>';
         echo '<p><strong>' . __('Redirect URI:', 'dafo-social-login') . '</strong> ' . home_url('/dafo-social-login/callback/bluesky/') . '</p>';
     }
     

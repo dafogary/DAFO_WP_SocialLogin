@@ -111,8 +111,27 @@ class DAFO_Social_Login_OAuth {
             return false;
         }
         
-        $decoded = base64_decode($state);
-        return json_decode($decoded, true);
+        // Validate base64 encoding before decoding
+        if (!preg_match('/^[a-zA-Z0-9\/+]*={0,2}$/', $state)) {
+            error_log('DAFO Social Login - Invalid state parameter format');
+            return false;
+        }
+        
+        $decoded = base64_decode($state, true);
+        
+        if ($decoded === false) {
+            error_log('DAFO Social Login - Failed to decode state parameter');
+            return false;
+        }
+        
+        $data = json_decode($decoded, true);
+        
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            error_log('DAFO Social Login - Invalid state JSON: ' . json_last_error_msg());
+            return false;
+        }
+        
+        return $data;
     }
     
     private function find_or_create_user($user_data, $provider) {
