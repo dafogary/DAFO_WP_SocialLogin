@@ -1,0 +1,361 @@
+/* Social Login Styles */
+.dafo-social-login-container {
+    margin: 20px 0;
+}
+
+.dafo-social-login-error {
+    margin: 0 0 16px;
+    padding: 10px 14px;
+    border: 1px solid #f5c2c7;
+    border-radius: 4px;
+    background: #f8d7da;
+    color: #842029;
+}
+
+.dafo-social-login-separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.dafo-social-login-separator::before,
+.dafo-social-login-separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
+
+.dafo-social-login-separator span {
+    padding: 0 10px;
+    color: #666;
+    font-size: 14px;
+}
+
+.dafo-social-login-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dafo-social-login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    gap: 10px;
+}
+
+.dafo-social-login-button:hover {
+    background: #f8f8f8;
+    border-color: #ccc;
+    color: #000;
+    text-decoration: none;
+}
+
+.dafo-social-login-button svg {
+    flex-shrink: 0;
+}
+
+/* Provider-specific styles */
+.dafo-social-linkedin {
+    background: #0077b5;
+    color: #fff;
+    border-color: #0077b5;
+}
+
+.dafo-social-linkedin:hover {
+    background: #006399;
+    border-color: #006399;
+    color: #fff;
+}
+
+.dafo-social-facebook {
+    background: #1877f2;
+    color: #fff;
+    border-color: #1877f2;
+}
+
+.dafo-social-facebook:hover {
+    background: #145dbf;
+    border-color: #145dbf;
+    color: #fff;
+}
+
+.dafo-social-google {
+    background: #fff;
+    color: #333;
+    border-color: #ddd;
+}
+
+.dafo-social-google:hover {
+    background: #f8f8f8;
+    border-color: #ccc;
+    color: #000;
+}
+
+.dafo-social-apple {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+.dafo-social-apple:hover {
+    background: #333;
+    border-color: #333;
+    color: #fff;
+}
+
+.dafo-social-instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: #fff;
+    border-color: transparent;
+}
+
+.dafo-social-instagram:hover {
+    opacity: 0.9;
+    color: #fff;
+}
+
+.dafo-social-bluesky {
+    background: #1185fe;
+    color: #fff;
+    border-color: #1185fe;
+}
+
+.dafo-social-bluesky:hover {
+    background: #0e6fd9;
+    border-color: #0e6fd9;
+    color: #fff;
+}
+
+/* Bluesky login form */
+.dafo-bluesky-login-form {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+.dafo-bluesky-login-form h3 {
+    margin-top: 0;
+}
+
+.dafo-bluesky-login-form .input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .dafo-social-login-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .dafo-social-login-button {
+        flex: 1;
+        min-width: 200px;
+    }
+}
+
+/* Login page specific styles */
+#login .dafo-social-login-container {
+    margin-bottom: 20px;
+}
+
+#login .dafo-social-login-button {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================================================================
+   Shortcode: [dafo_login_register]
+   ========================================================================= */
+
+.dafo-sc-wrapper {
+    max-width: 480px;
+    margin: 0 auto;
+    font-family: inherit;
+}
+
+/* Notices */
+.dafo-sc-notice {
+    padding: 10px 14px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.dafo-sc-notice--error {
+    background: #fde8e8;
+    border: 1px solid #f5c6c6;
+    color: #a00;
+}
+
+.dafo-sc-notice--success {
+    background: #e8f5e9;
+    border: 1px solid #c6e5c6;
+    color: #1a5c1a;
+}
+
+/* Logged-in state */
+.dafo-sc-logged-in {
+    padding: 16px;
+    background: #f5f5f5;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Tabs */
+.dafo-sc-tabs {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 24px;
+}
+
+.dafo-sc-tab {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 12px 16px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.2s;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+}
+
+.dafo-sc-tab:hover {
+    color: #333;
+}
+
+.dafo-sc-tab.active {
+    color: #0073aa;
+    border-bottom-color: #0073aa;
+}
+
+/* Panels */
+.dafo-sc-panel {
+    display: none;
+}
+
+.dafo-sc-panel.active {
+    display: block;
+}
+
+/* Form fields */
+.dafo-sc-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.dafo-sc-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.dafo-sc-field label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.dafo-sc-field input[type="text"],
+.dafo-sc-field input[type="email"],
+.dafo-sc-field input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.dafo-sc-field input:focus {
+    outline: none;
+    border-color: #0073aa;
+    box-shadow: 0 0 0 2px rgba(0, 115, 170, 0.2);
+}
+
+/* Remember + lost password row */
+.dafo-sc-remember {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dafo-sc-remember label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.dafo-sc-lost-password {
+    font-size: 13px;
+    color: #0073aa;
+    text-decoration: none;
+}
+
+.dafo-sc-lost-password:hover {
+    text-decoration: underline;
+}
+
+/* Inline messages (per-form) */
+.dafo-sc-messages {
+    font-size: 14px;
+    min-height: 0;
+}
+
+.dafo-sc-messages.error {
+    color: #a00;
+}
+
+.dafo-sc-messages.success {
+    color: #1a5c1a;
+}
+
+/* Submit button */
+.dafo-sc-submit {
+    width: 100%;
+    padding: 12px;
+    background: #0073aa;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.dafo-sc-submit:hover {
+    background: #005f8d;
+}
+
+.dafo-sc-submit:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+
+/* Social buttons inside shortcode */
+.dafo-sc-social {
+    margin-top: 8px;
+}

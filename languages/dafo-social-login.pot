@@ -1,0 +1,187 @@
+# DAFO Social Login POT
+# This file is distributed under the same license as the DAFO Social Login package.
+msgid ""
+msgstr ""
+"Project-Id-Version: DAFO Social Login 1.0.1\n"
+"Report-Msgid-Bugs-To: https://github.com/dafogary/DAFO_WP_SocialLogin\n"
+"POT-Creation-Date: 2025-01-01 00:00:00+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Or continue with"
+msgstr ""
+
+msgid "Continue with %s"
+msgstr ""
+
+msgid "Invalid provider"
+msgstr ""
+
+msgid "Authentication failed"
+msgstr ""
+
+msgid "Invalid user data from provider"
+msgstr ""
+
+msgid "Account creation is disabled"
+msgstr ""
+
+msgid "Social Login Settings"
+msgstr ""
+
+msgid "Social Login"
+msgstr ""
+
+msgid "Enable Social Platforms"
+msgstr ""
+
+msgid "Select which social platforms you want to enable for login:"
+msgstr ""
+
+msgid "Enabled Providers"
+msgstr ""
+
+msgid "LinkedIn"
+msgstr ""
+
+msgid "Facebook"
+msgstr ""
+
+msgid "Google"
+msgstr ""
+
+msgid "Apple"
+msgstr ""
+
+msgid "Instagram"
+msgstr ""
+
+msgid "Bluesky"
+msgstr ""
+
+msgid "LinkedIn Settings"
+msgstr ""
+
+msgid "Client ID"
+msgstr ""
+
+msgid "Get your LinkedIn Client ID from the LinkedIn Developer Console"
+msgstr ""
+
+msgid "Client Secret"
+msgstr ""
+
+msgid "Redirect URI"
+msgstr ""
+
+msgid "Add this URL to your LinkedIn app settings"
+msgstr ""
+
+msgid "Facebook Settings"
+msgstr ""
+
+msgid "App ID"
+msgstr ""
+
+msgid "App Secret"
+msgstr ""
+
+msgid "Google Settings"
+msgstr ""
+
+msgid "Apple Settings"
+msgstr ""
+
+msgid "Service ID"
+msgstr ""
+
+msgid "Team ID"
+msgstr ""
+
+msgid "Key ID"
+msgstr ""
+
+msgid "Private Key (.p8 file content)"
+msgstr ""
+
+msgid "Instagram Settings"
+msgstr ""
+
+msgid "Bluesky Settings"
+msgstr ""
+
+msgid "Bluesky uses decentralized authentication and does not require API credentials."
+msgstr ""
+
+msgid "General Settings"
+msgstr ""
+
+msgid "Display Options"
+msgstr ""
+
+msgid "Show on login page"
+msgstr ""
+
+msgid "Show on registration page"
+msgstr ""
+
+msgid "Account Creation"
+msgstr ""
+
+msgid "Automatically create account for new users"
+msgstr ""
+
+msgid "Redirect After Login"
+msgstr ""
+
+msgid "Leave empty to redirect to admin dashboard"
+msgstr ""
+
+msgid "Shortcode Usage"
+msgstr ""
+
+msgid "Use the following shortcode to display social login buttons anywhere:"
+msgstr ""
+
+msgid "Invalid state parameter"
+msgstr ""
+
+msgid "No authorization code received"
+msgstr ""
+
+msgid "Token request failed"
+msgstr ""
+
+msgid "Failed to retrieve user profile"
+msgstr ""
+
+msgid "Login with Bluesky"
+msgstr ""
+
+msgid "Handle or Email"
+msgstr ""
+
+msgid "Password"
+msgstr ""
+
+msgid "No Bluesky credentials provided"
+msgstr ""
+
+msgid "Invalid security token"
+msgstr ""
+
+msgid "Apple credentials are incomplete"
+msgstr ""
+
+msgid "Invalid Apple private key"
+msgstr ""
+
+msgid "Invalid ID token"
+msgstr ""
+
+msgid "Invalid token payload"
+msgstr ""
